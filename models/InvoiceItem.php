@@ -60,7 +60,7 @@ class InvoiceItem extends Model
             $this->tax = $taxClass->getTotalTax($this->subtotal);
         }
 
-        $this->total = $this->subtotal + $this->tax;
+        $this->total = $this->subtotal;//+ $this->tax;
     }
 
     public function getTaxClass()

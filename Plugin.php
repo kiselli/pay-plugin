@@ -85,6 +85,7 @@ class Plugin extends PluginBase
             \Responsiv\Pay\PaymentTypes\Offline::class        => 'offline',
             \Responsiv\Pay\PaymentTypes\Skrill::class         => 'skrill',
             \Responsiv\Pay\PaymentTypes\Stripe::class         => 'stripe',
+            \Responsiv\Pay\PaymentTypes\PaypalExpress::class  => 'paypal-express',
         ];
     }
 

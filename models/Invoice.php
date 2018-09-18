@@ -303,7 +303,7 @@ class Invoice extends Model implements InvoiceInterface
         $this->discount = $discount;
         $this->subtotal = $subtotal;
         $this->tax = $tax;
-        $this->total = $subtotal + $tax;
+        $this->total = $subtotal;// + $tax;
 
         return $this->total;
     }
@@ -595,6 +595,16 @@ class Invoice extends Model implements InvoiceInterface
         ];
 
         InvoiceLog::createRecord($this, $message, $options);
+    }
+
+    public function setExternalReference($val)
+    {
+        $this->attributes['external_reference'] = $val;
+    }
+
+    public function getExternalReference()
+    {
+        return $this->attributes['external_reference'];
     }
 
     /**
