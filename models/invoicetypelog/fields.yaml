@@ -3,3 +3,6 @@
 # ===================================
 
 fields:
+    response_data:
+        label: Response
+        type: partial

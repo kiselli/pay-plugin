@@ -1,0 +1,16 @@
+<?php
+
+function printArr($arr):string
+{
+    $resp = "<ul>";
+    foreach ($arr as $key => $data) {
+        if (is_array($data)) {
+            $data = printArr($data);
+        }
+        $resp .= "<li>$key: $data</li>";
+    }
+    return $resp.'<ul>';
+}
+
+
+echo printArr($value);
